@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="video-wrapper">
+        <div>
+            <video src="./videoplayback.mp4" id="video-player" width="640" height="370"></video>
+            <div class="range-video">
+                <input type="range" min="0" max="100" class="range">
+            </div>
+        </div>
+        <div class="video-control ">
+            <div class="play-pause-btn">
+                <button id="play-btn" onclick="Play()">
+                    <img src="./play-button-arrowhead.svg" alt="" id="image-play">
+                </button>
+
+
+                <h4><span id="hour-text">00</span> : <span id="minute-text">00</span> / <span id="full-hour">00</span> :
+                    <span id="full-min">00</span></h4>
+            </div>
+
+            <div class="sttings">
+
+                <button id="mute-btn">
+                    <img src="./speaker-filled-audio-tool.svg" alt="" id="image-holder">
+                </button>
+                <input id="volume-btn" type="range">
+
+                <button id="seting-btn">
+                    <img src="./settings.svg" alt="">
+                    <div class="alert">
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Quality</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Playback speed</a></li>
+                        </ul>
+                    </div>
+                </button>
+
+                <button id="fullscreen-btn">
+                    <img src="./fullscreen.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

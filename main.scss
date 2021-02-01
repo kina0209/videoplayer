@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:none;
+    border: none;
+    outline: none;
+    display: block;
+    img{
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+    }
+}
+
+.video-wrapper{
+    box-shadow: 0 0 30px #fff;
+    position: relative;
+    width: 640px;
+    height: 355px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all ease 0.5s;
+    .range-video{
+        input{
+            position: relative;
+            top: -34px;
+            width: 610px;
+            height: 2px;
+            left: 10px;
+            &.active{
+                position: relative;
+                top: -90px;
+            }
+        }
+    }
+
+    .video-control{
+        position: absolute;
+        transition: all ease 0.5s;
+        width: 630px;
+        padding: 10px 15px;
+        display: flex;
+        border-bottom: 1px solid #000;
+        border-top: 1px solid #000;
+        justify-content: space-between;
+        top: 370px;
+        &.active{
+            top: 300px;
+            transition: all ease 0.5;
+            z-index: 1;
+            background: rgba($color: #fff, $alpha: 0.2);
+            backdrop-filter: blur(5px);
+        }
+        .play-pause-btn{
+            display: flex;
+            align-items: center;
+            button{
+                margin-right: 20px;
+            }
+        }
+        .sttings{
+            display: flex;
+            align-items: center;
+            transition: all ease 0.5s;
+            button{
+            &#seting-btn{
+                margin-right: 20px;
+                margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+#volume-btn{
+    width: 60px;
+    height: 2px;
+    background: red;
+}
+#mute-btn{
+    position: relative;
+    right: 20px;
+}
+
+#seting-btn{
+    position: relative;
+}
+
+.alert{
+    transition: all ease 0.5s;
+    &.active{
+        display: block;
+        transition: all ease 0.4s;
+    }
+    display: none;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 91%, 64% 91%, 55% 100%, 46% 91%, 0 91%);
+    left: -75px;
+    top: -110px;
+    border-radius: 10px;
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    background: rgba($color: #fff, $alpha: 0.3);
+    backdrop-filter: blur(10px);
+    a{
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 5px 0;
+        border-right-style: 5px;
+        display: block;
+        transition: all ease 0.3s;
+        &:hover{
+            background-color: #fff;
+            color: #000;
+        }
+    }
+}
